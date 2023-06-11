@@ -15,6 +15,35 @@ from ultralytics.yolo.utils.plotting import Annotator
 from cv2 import cvtColor
 import os
 
+# ------
+# Update the repository configuration
+with open('packages.txt', 'r') as f:
+    packages = f.readlines()
+
+updated_packages = []
+codename_updated = False
+
+for package in packages:
+    package = package.strip()  # Remove leading/trailing whitespaces
+    if 'http://security.debian.org/debian-security' in package:
+        codename_updated = True
+    else:
+        updated_packages.append(package)
+
+# Save the modified list back to the packages.txt file
+with open('packages.txt', 'w') as f:
+    f.write('\n'.join(updated_packages))
+
+# Update the repository configuration on the system
+if codename_updated:
+    os.system('sudo sed -i "s/bullseye-security/bookworm-security/g" /etc/apt/sources.list')
+
+# Install the packages
+os.system('sudo apt-get update')
+os.system('sudo apt-get install -y ' + ' '.join(updated_packages))
+
+# ----------------------------------------------------------------
+
 model = YOLO('best.pt')
 def bgr2rgb(image):
     return image[:, :, ::-1]

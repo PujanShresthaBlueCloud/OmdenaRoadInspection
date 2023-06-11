@@ -1,5 +1,2 @@
 libgl1
-libpangocairo-1.0-0
-libgl1-mesa-glx
 ffmpeg
-http://security.debian.org/debian-security/dists/bookworm-security/InRelease
