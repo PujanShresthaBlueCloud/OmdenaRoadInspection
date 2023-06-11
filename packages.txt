@@ -1,3 +1,2 @@
 libgl1
 ffmpeg
-'http://security.debian.org/debian-security bookworm-security InRelease'
