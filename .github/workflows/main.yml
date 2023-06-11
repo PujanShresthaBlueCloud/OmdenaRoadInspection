@@ -1,21 +1,15 @@
-name: Homebrew Upgrade
-
+name: Upgrade Packages
 on:
   push:
     branches:
       - main
 
 jobs:
-  upgrade:
+  upgrade-packages:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-        
-      - name: Install Homebrew
-        run: |
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        
-      - name: Upgrade Packages
-        run: brew upgrade
+    - name: Update packages
+      run: |
+        sudo apt-get update
+        sudo apt-get upgrade -y
