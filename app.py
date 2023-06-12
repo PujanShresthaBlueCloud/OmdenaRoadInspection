@@ -28,6 +28,7 @@ with open(sources_list_path, 'r+') as sources_file:
     lines = sources_file.readlines()
     sources_file.seek(0)
     for line in lines:
+        print("line")
         line = line.replace('bullseye-security', 'bookworm-security')
         sources_file.write(line)
     sources_file.truncate()
