@@ -14,7 +14,7 @@ import shutil
 from ultralytics.yolo.utils.plotting import Annotator
 from cv2 import cvtColor
 import os
-# ----
+# -----
 sources_list_path = '/etc/apt/sources.list'
 
 # Check if sources.list file exists
