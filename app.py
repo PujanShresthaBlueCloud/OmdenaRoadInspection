@@ -14,30 +14,7 @@ import shutil
 from ultralytics.yolo.utils.plotting import Annotator
 from cv2 import cvtColor
 import os
-# -----
-sources_list_path = '/etc/apt/sources.list'
 
-# Check if sources.list file exists
-if not os.path.exists(sources_list_path):
-    # Create the sources.list file
-    with open(sources_list_path, 'w') as sources_file:
-        sources_file.write('deb http://security.debian.org/debian-security bookworm-security/updates main')
-
-# Modify the 'Codename' value in sources.list
-with open(sources_list_path, 'r+') as sources_file:
-    lines = sources_file.readlines()
-    sources_file.seek(0)
-    for line in lines:
-        print("line")
-        line = line.replace('bullseye-security', 'bookworm-security')
-        sources_file.write(line)
-    sources_file.truncate()
-
-# Update package repositories
-os.system('sudo apt-get update')
-os.system('sudo apt-get --allow-releaseinfo-change-suite update')
-
-# -----
 model = YOLO('best.pt')
 def bgr2rgb(image):
     return image[:, :, ::-1]
