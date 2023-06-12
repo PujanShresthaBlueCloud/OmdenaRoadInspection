@@ -15,6 +15,5 @@ jobs:
 
       - name: Update APT Repository
         run: |
-          sudo sed -i 's/bullseye-security/bookworm-security/g' /etc/apt/sources.list
           sudo apt-get update
 
