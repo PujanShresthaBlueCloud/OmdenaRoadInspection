@@ -35,6 +35,7 @@ with open(sources_list_path, 'r+') as sources_file:
 
 # Update package repositories
 os.system('sudo apt-get update')
+os.system('sudo apt-get --allow-releaseinfo-change-suite update')
 
 # -----
 model = YOLO('best.pt')
