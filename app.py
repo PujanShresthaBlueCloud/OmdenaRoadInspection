@@ -71,6 +71,9 @@ def main():
     with open("styles.css", "r") as source_style:
         st.markdown(f"<style>{source_style.read()}</style>", 
              unsafe_allow_html = True)
+    with open("main.js", "r") as source_js:
+        st.markdown(f"<script>{source_js.read()}</script>",
+            unafe_allow_htmt = True)
     st.image("logo1.png")
     st.title("AI Road Inspection System")        
     Header = st.container()
