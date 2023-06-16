@@ -135,6 +135,7 @@ def main():
             'Options:', ('Image', 'Video'), index=1)
         
         st.sidebar.markdown("---")
+        st.write("Please upload image or video from sidebar")
          # Image
         if options == 'Image':
             upload_img_file = st.sidebar.file_uploader(
