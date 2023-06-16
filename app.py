@@ -71,9 +71,8 @@ def main():
     with open("styles.css", "r") as source_style:
         st.markdown(f"<style>{source_style.read()}</style>", 
              unsafe_allow_html = True)
-    st.title("AI Road Inspection System")
     st.image("logo1.png")
-        
+    st.title("AI Road Inspection System")        
     Header = st.container()
     
     ##MainMenu
