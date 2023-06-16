@@ -92,14 +92,8 @@ def main():
     ##HOME page 
     
     if selected == "Project Information":
-        # st.image("logo.png")
-        logo = """
-            <html>
-            <img src="logo.png" width=500 height=200/>
-            </html>
-        """
-        st.markdown(logo, unsafe_allow_html=True)
         st.title("AI Road Inspection System")
+        st.image("logo.png", width=600, height=350)
 
         st.subheader("Problem Statement")
         problem_statement = """
