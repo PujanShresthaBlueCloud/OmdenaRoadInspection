@@ -102,9 +102,9 @@ def main():
         inspections. The aim of the project is to use machine learning to study and analyze different types of road defects
         and to automatically detect any road abnormalities.
         """
-        st.text(problem_statement)
+        st.write(problem_statement)
         with st.expander("read more.."):
-            st.text(""" 
+            st.write(""" 
             The goal of this project is to design, build and test an inspection system for detecting road abnormalities, defects, and damages
             using machine learning. The proposed system aims to improve the efficiency of road inspections and reduce
             the time and labor required for the process. The system will be equipped with a camera to capture video streams
