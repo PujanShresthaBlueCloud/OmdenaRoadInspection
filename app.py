@@ -71,6 +71,7 @@ def main():
     with open("styles.css", "r") as source_style:
         st.markdown(f"<style>{source_style.read()}</style>", 
              unsafe_allow_html = True)
+        st.image("logo1.png")
         st.title("AI Road Inspection System")
         
     Header = st.container()
@@ -93,8 +94,6 @@ def main():
     ##HOME page 
     
     if selected == "Project Information":
-        st.image("logo.png", width=200, height=200)
-
         st.subheader("Problem Statement")
         problem_statement = """
         Current practices of performing road inspections are time-consuming and labour-intensive. Road surfaces degrade on a 
