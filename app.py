@@ -71,8 +71,12 @@ def main():
     with open("styles.css", "r") as source_style:
         st.markdown(f"<style>{source_style.read()}</style>", 
              unsafe_allow_html = True)
-    with open("main.js", "r") as source_js:
-        st.markdown(f"<script>{source_js.read()}</script>", unafe_allow_html = True)
+
+    js_code = """
+        const elements = window.parent.document.getElementsByTagName('footer');
+        elements[0].innerHTML = "Mexico x Omdena VIT Bhopal Local Chapter " + new Date().getFullYear();
+        """
+    st.markdown(f"<script>{js_code}</script>", unsafe_allow_html=True)
             
     st.image("logo1.png")
     st.title("AI Road Inspection System")        
