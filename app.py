@@ -93,7 +93,7 @@ def main():
     
     if selected == "Project Information":
         st.title("AI Road Inspection System")
-        st.image("logo.png", width=600, height=350)
+        st.image("logo.png")
 
         st.subheader("Problem Statement")
         problem_statement = """
