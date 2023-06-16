@@ -10,3 +10,10 @@ div.css-1offfwp{
     color: rgb(240, 0, 0);
     font-weight: 300
   }
+
+  #MainMenu{
+    visibility: hidden;
+  }
+  footer{
+    visibility: hidden;
+  }
