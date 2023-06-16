@@ -72,7 +72,6 @@ def main():
         st.markdown(f"<style>{source_style.read()}</style>", 
              unsafe_allow_html = True)
         
-    st.title("AI Road Inspection System")
     Header = st.container()
     
     ##MainMenu
@@ -93,7 +92,13 @@ def main():
     ##HOME page 
     
     if selected == "Project Information":
-        st.image("logo.png")
+        # st.image("logo.png")
+        logo = """
+            <img src="logo.png" width=200 height=200/>
+        """
+        st.markdown(logo, unsafe_allow_html=True)
+        st.title("AI Road Inspection System")
+
         st.subheader("Problem Statement")
         problem_statement = """
         Current practices of performing road inspections are time-consuming and labour-intensive. Road surfaces degrade on a 
@@ -125,7 +130,7 @@ def main():
         we developed a web application using the Streamlit API which serves as a user friendly interface for others to test the 
         trained model on their own videos and images
         """
-        st.text(Project_goal)
+        st.write(Project_goal)
         
     elif selected == "Predict Defects": 
         
